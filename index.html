@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR" style="scroll-behavior: smooth ;" >
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>JCR Esquadrias</title>
+ 
+</head>
+
+<body class="bg-neutral-900 ">
+    <header class="animate-fadeIn animation-delay-2s animation-iteration-infinite">
+        <nav class="fixed flex  w-full fade-in z-40">
+            <div class="flex justify-center w-full">
+                <ul class='gap-6  flex justify-center text-zinc-50 m-7 '>
+                    <li class="cursor-pointer p-2 hover:bg-lime-900 rounded transition duration-300 ease-in-out "><a href="#about">Sobre</a></li>
+                    <li class="cursor-pointer p-2 hover:bg-lime-900 rounded"><a href="#service">Serviços</a></li>
+                    <li class="cursor-pointer p-2 hover:bg-lime-900 rounded"><a href="#contact">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="flex justify-center fade-in">
+            <div class="flex h-screen justify-center flex-col space-y-2">
+                <img class=' w-96 h-auto ' src="img/logo.png" alt="JCR">
+                <h1 class="text-green-500 text-xl text-center">Esquadrias e Vidros temperados</h1>
+            </div>
+        </section>
+        <!-- Sobre -->
+        <section>
+            <div class="flex flex-col items-center h-screen justify-evenly bg-neutral-900 scroll-smooth" id="about">
+                <h1 class="text-green-50 text-6xl ">Sobre</h1>
+                <p class="text-green-50 m-3 md:w-3/6 text-justify text-base md:text-1xl">
+                    Em 2017, Cesar Augusto Ribeiro fundou a JCR - Esquadrias e Vidros Temperados, com o objetivo de
+                    oferecer à região soluções completas em esquadrias e vidros temperados, aliando qualidade superior
+                    com um atendimento personalizado.
+                    Ao longo de sua trajetória, a JCR se consolidou como referência em confiança e profissionalismo,
+                    atendendo às mais diversas necessidades de seus clientes, desde obras residenciais até grandes
+                    projetos comerciais.</p>
+            </div>
+        </section>
+
+        <!-- Serviços -->
+        <div class="flex flex-col items-center h-auto justify-center gap-16 bg-neutral-900 " id="service">
+            <h1 class="text-green-50 text-6xl mt-7">Serviços</h1>
+
+            <section class="h-auto md:h-screen w-full md:w-3/4  flex flex-col justify-center items-center">
+               
+                <div class='flex flex-col md:flex-row gap-2 max-lg:gap-8 m-3 '>
+                    <div class='flex flex-col justify-center w-full text-emerald-50 md:m-3'>
+                        <h1 class='text-center pb-5 text-2xl font-bold'>Portões em Aluminio</h1>
+                        <p class=' text-justify text-base md:text-1xl'>Proteja o que é mais importante para você com
+                            os portões de alumínio da JCR Esquadrias. Fabricados com materiais de alta qualidade e
+                            tecnologia de ponta, nossos portões oferecem a combinação perfeita de segurança,
+                            durabilidade e elegância para sua casa.</p>
+                    </div>
+
+                    <div class=" w-full text-emerald-50 flex items-center">
+                        <div class='flex justify-center w-full'>
+                            <img class='w-full rounded-md' src="img/fotoPortao.jpg" alt="JCR logo">
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            <!-- seção de portoes -->
+            <hr class='text-green-50 w-60 text-center' />
+
+
+            <section class="h-auto md:h-screen w-full lg:w-3/4  text-emerald-50 flex flex-col items-center" id='moveis'>
+
+
+                <div class='flex flex-col-reverse md:flex-row m-3 gap-2'>
+                    <div class='flex justify-center w-auto md:w-full '>
+
+
+                        <img class='transition-opacity w-full rounded-md' src="img/movelplanejado.png"
+                            alt="movel planejado">
+                    </div>
+                    <div class='flex flex-col justify-center w-full md:m-3'>
+                        <h1 class='text-center text-xl pb-5 font-bold'>Móveis Planejados</h1>
+                        <p class=' text-justify text-base md:text-1xl'>Crie espaços funcionais, personalizados e
+                            esteticamente impecáveis com os móveis planejados em alumínio da JCR Esquadrias.
+                            Fabricados com materiais de alta qualidade e tecnologia de ponta, nossos móveis oferecem
+                            a combinação perfeita de praticidade, durabilidade e beleza para sua casa ou escritório.
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+
+            <hr class='text-green-50 w-60' />
+            <section
+                class="h-auto md:h-screen w-full lg:w-3/4  text-emerald-50 flex flex-col items-center"
+                id='vidros'>
+
+                <div class='flex flex-col md:flex-row m-3 gap-2'>
+                    <div class='flex flex-col justify-center w-full text-emerald-50 md:m-3'>
+                        <h1 class='pb-5 text-xl text-center md:text-2xl font-bold'>Vidros temperados, Espelhos e Box
+                        </h1>
+                        <p class='text-justify text-base md:text-1xl'>A JCR Esquadrias oferece soluções completas em
+                            vidros temperados sob medida e box para banheiros, transformando seus ambientes com beleza,
+                            funcionalidade e segurança.</p>
+                    </div>
+                    <div class='flex justify-center w-auto md:w-full'>
+                        <img class='transition-opacity w-full rounded-md' src="img/espelho.jpg" alt="espelho">
+                    </div>
+                </div>
+
+            </section>
+        </div>
+        <!-- Contato -->
+        <section
+            class="h-screen bg-neutral-900  text-emerald-50 flex flex-col items-center justify-center w-full gap-20"
+            id='contact'>
+
+            <h1 class="text-green-50 text-6xl mt-7">Contato</h1>
+            <div class='flex flex-col md:flex-row w-full md:w-3/4 gap-6'>
+                <div class='flex justify-center  md:w-1/2 w-full '>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3639.373513754313!2d-46.80674109999999!3d-24.193694699999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94d1d5426cc8347d%3A0xd989fb76b680ea44!2sR.%20Peru%C3%ADbe%2C%20312%20-%20Praia%20dos%20Sonhos%2C%20Itanha%C3%A9m%20-%20SP%2C%2011740-000!5e0!3m2!1spt-BR!2sbr!4v1719689474479!5m2!1spt-BR!2sbr"
+                        class='w-full  h-full m-3'></iframe>
+                </div>
+                <div class='flex justify-center md:w-1/2 w-full gap-5 mt-5'>
+                    <div class='flex justify-center'>
+                        <a rel="stylesheet"
+                            href="https://wa.me/5513997483229?text=Olá,%20gostaria%20de%20fazer%20um%20orçamento!"
+                            target='_blanck' class='flex justify-center items-center w-full gap-2'>
+                            <i class="bi bi-whatsapp"></i>
+                            <p>13 99748-3229</p>
+                        </a>
+                    </div>
+                    <div class='flex justify-center'>
+                        <a href="tel:1333288584" class='flex justify-center items-center w-full gap-2'>
+                            <i class="bi bi-telephone-fill"></i>
+                            <p>13 3328-8584</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+    <footer class="text-green-50 text-center bg-neutral-900 ">&copy;Rafael Mattos</footer>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+
+</html>
