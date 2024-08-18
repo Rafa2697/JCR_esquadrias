@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+img{
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+section{
+    column-count: 4;
+    column-gap: 12px;
+}
+
+@media screen and (max-width:768px) {
+    section{
+        column-count: 2;
+    }
+}
