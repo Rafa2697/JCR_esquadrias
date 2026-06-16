@@ -1,170 +1,242 @@
 <!DOCTYPE html>
-<html lang="pt-BR" style="scroll-behavior: smooth ;">
+<html lang="pt-BR" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <title>JCR Esquadrias</title>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 </head>
 
-<body class="bg-neutral-900 ">
-    <header class="animate-fadeIn animation-delay-2s animation-iteration-infinite">
+<body class="bg-[#0a0a0a] text-slate-50 antialiased selection:bg-emerald-500 selection:text-white">
+    
+    <!-- Navbar -->
+    <header class="fixed top-0 w-full z-50 glass transition-all duration-300 border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-2 group">
+                <span class="font-heading font-bold text-2xl tracking-wider text-emerald-400 group-hover:text-emerald-300 transition-colors">JCR</span>
+                <span class="text-sm font-light tracking-widest text-slate-300 hidden sm:block">ESQUADRIAS</span>
+            </a>
+            
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex gap-8 items-center">
+                <a href="#about" class="text-sm font-medium text-slate-300 hover:text-emerald-400 transition-colors">Sobre</a>
+                <a href="#service" class="text-sm font-medium text-slate-300 hover:text-emerald-400 transition-colors">Serviços</a>
+                <a href="galeria.html" class="text-sm font-medium text-slate-300 hover:text-emerald-400 transition-colors">Galeria</a>
+                <a href="#contact" class="text-sm font-medium bg-emerald-600/20 text-emerald-400 hover:bg-emerald-500 hover:text-white px-5 py-2 rounded-full transition-all border border-emerald-500/30">Contato</a>
+            </nav>
 
-        <nav class="fixed flex  w-full fade-in z-40">
-            <a class="bi bi-list cursor-pointer btn-primary text-5xl hover:text-green-100 transition-all text-gray-50 ml-3 mt-3" data-bs-toggle="offcanvas"
-                href="#offcanvasExample" role="button" aria-controls="offcanvasExample"></a>
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-3xl text-slate-200 focus:outline-none">
+                <i class="bi bi-list"></i>
+            </button>
+        </div>
 
-            <div class="flex offcanvas offcanvas-start bg-neutral-800" tabindex="-1"
-                id="offcanvasExample" data-bs-scroll="true" style="width: 200px;">
-
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title text-slate-50" id="offcanvasExampleLabel">Menu</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-
-                <ul class='gap-6  flex flex-col justify-center items-center text-white m-7 '>
-                    <li class="cursor-pointer p-2 hover:bg-lime-900 rounded transition duration-300 ease-in-out "><a
-                            href="#about">Sobre</a></li>
-                    <li class="cursor-pointer p-2 hover:bg-lime-900 rounded"><a href="#service">Serviços</a></li>
-                    <li class="cursor-pointer p-2 hover:bg-lime-900 rounded"><a href="#contact">Contato</a></li>
-                    <li class="cursor-pointer p-2 hover:bg-lime-900 rounded"><a href="galeria.html">Fotos</a></li>
-                </ul>
-
-            </div>
-        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden glass-card absolute top-full left-0 w-full flex flex-col items-center py-6 gap-6 border-t border-white/10 shadow-2xl">
+            <a href="#about" class="text-lg font-medium text-slate-200 hover:text-emerald-400 transition-colors">Sobre</a>
+            <a href="#service" class="text-lg font-medium text-slate-200 hover:text-emerald-400 transition-colors">Serviços</a>
+            <a href="galeria.html" class="text-lg font-medium text-slate-200 hover:text-emerald-400 transition-colors">Galeria de Fotos</a>
+            <a href="#contact" class="text-lg font-medium text-emerald-400 hover:text-emerald-300 transition-colors border-b border-emerald-400/30 pb-1">Contato</a>
+        </div>
     </header>
+
     <main>
-        <section class="flex justify-center fade-in">
-            <div class="flex h-screen justify-center flex-col space-y-2">
-                <img class=' w-96 h-auto ' src="img/logo.png" alt="JCR">
-                <h1 class="text-green-500 text-xl text-center">Esquadrias e Vidros temperados</h1>
+        <!-- Hero Section -->
+        <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden px-6 pt-20">
+            <div class="hero-glow"></div>
+            <div class="flex flex-col items-center text-center space-y-8 z-10 max-w-4xl mx-auto reveal active">
+                <img class="w-64 md:w-80 h-auto drop-shadow-2xl animate-[pulse_4s_ease-in-out_infinite]" src="img/logo.png" alt="JCR Logo">
+                <h1 class="font-heading text-5xl md:text-7xl font-bold tracking-tight">
+                    Excelência em <br/>
+                    <span class="text-gradient">Esquadrias e Vidros</span>
+                </h1>
+                <p class="text-lg md:text-xl text-slate-400 max-w-2xl font-light">
+                    Transformando ambientes com sofisticação, segurança e design sob medida para o seu projeto.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 pt-4 w-full sm:w-auto">
+                    <a href="#contact" class="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-3 rounded-full font-medium transition-all hover:scale-105 shadow-[0_0_20px_rgba(5,150,105,0.4)] text-center">Faça um Orçamento</a>
+                    <a href="#service" class="glass-card hover:bg-white/10 text-white px-8 py-3 rounded-full font-medium transition-all text-center">Nossos Serviços</a>
+                </div>
             </div>
         </section>
+
         <!-- Sobre -->
-        <section>
-            <div class="flex flex-col items-center h-screen justify-evenly bg-neutral-900 scroll-smooth" id="about">
-                <h1 class="text-green-50 text-6xl ">Sobre</h1>
-                <p class="text-green-50 m-3 md:w-3/6 text-justify text-base md:text-1xl">
-                    Em 2017, Cesar Augusto Ribeiro fundou a JCR - Esquadrias e Vidros Temperados, com o objetivo de
-                    oferecer à região soluções completas em esquadrias e vidros temperados, aliando qualidade superior
-                    com um atendimento personalizado.
-                    Ao longo de sua trajetória, a JCR se consolidou como referência em confiança e profissionalismo,
-                    atendendo às mais diversas necessidades de seus clientes, desde obras residenciais até grandes
-                    projetos comerciais.</p>
+        <section id="about" class="py-24 px-6 relative">
+            <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 reveal">
+                <div class="md:w-1/2 space-y-6">
+                    <h2 class="font-heading text-4xl md:text-5xl font-bold text-slate-50">Nossa <span class="text-emerald-400">História</span></h2>
+                    <div class="w-20 h-1 bg-emerald-500 rounded-full"></div>
+                    <p class="text-slate-300 text-lg leading-relaxed text-justify">
+                        Em 2017, Cesar Augusto Ribeiro fundou a <strong class="text-emerald-300 font-medium">JCR - Esquadrias e Vidros Temperados</strong>, com o objetivo de oferecer à região soluções completas, aliando qualidade superior com um atendimento personalizado.
+                    </p>
+                    <p class="text-slate-300 text-lg leading-relaxed text-justify">
+                        Ao longo de sua trajetória, a JCR se consolidou como referência em confiança e profissionalismo, atendendo às mais diversas necessidades de seus clientes, desde obras residenciais até grandes projetos comerciais.
+                    </p>
+                </div>
+                <div class="md:w-1/2 w-full flex justify-center">
+                    <div class="glass-card p-10 rounded-[2rem] w-full max-w-sm text-center relative overflow-hidden group">
+                        <div class="absolute inset-0 bg-gradient-to-br from-emerald-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                        <i class="bi bi-shield-check text-7xl text-emerald-400 mb-6 inline-block group-hover:scale-110 transition-transform duration-500"></i>
+                        <h3 class="font-heading text-2xl font-bold mb-3">Confiança & Qualidade</h3>
+                        <p class="text-slate-400">Garantia de um serviço feito com os melhores materiais e acabamentos do mercado.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- Serviços -->
-        <div class="flex flex-col items-center h-auto justify-center gap-16 bg-neutral-900 " id="service">
-            <h1 class="text-green-50 text-6xl mt-7">Serviços</h1>
+        <section id="service" class="py-24 px-6 bg-black/40 border-y border-white/5 relative">
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-px bg-gradient-to-r from-transparent via-emerald-500/20 to-transparent"></div>
+            
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-20 reveal">
+                    <h2 class="font-heading text-4xl md:text-5xl font-bold text-slate-50 mb-4">Nossos <span class="text-emerald-400">Serviços</span></h2>
+                    <div class="w-20 h-1 bg-emerald-500 rounded-full mx-auto mb-6"></div>
+                    <p class="text-slate-400 max-w-2xl mx-auto text-lg">Soluções completas e personalizadas para a sua obra ou reforma.</p>
+                </div>
 
-            <section class="h-auto md:h-screen w-full md:w-3/4  flex flex-col justify-center items-center">
-
-                <div class='flex flex-col md:flex-row gap-2 max-lg:gap-8 m-3 '>
-                    <div class='flex flex-col justify-center w-full text-emerald-50 md:m-3'>
-                        <h1 class='text-center pb-5 text-2xl font-bold'>Portões em Aluminio</h1>
-                        <p class=' text-justify text-base md:text-1xl'>Proteja o que é mais importante para você com
-                            os portões de alumínio da JCR Esquadrias. Fabricados com materiais de alta qualidade e
-                            tecnologia de ponta, nossos portões oferecem a combinação perfeita de segurança,
-                            durabilidade e elegância para sua casa.</p>
+                <div class="space-y-32">
+                    <!-- Portões -->
+                    <div class="flex flex-col md:flex-row items-center gap-12 reveal-left">
+                        <div class="md:w-1/2 space-y-6">
+                            <div class="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-emerald-500/10 text-emerald-400 mb-2 border border-emerald-500/20">
+                                <i class="bi bi-door-closed text-2xl"></i>
+                            </div>
+                            <h3 class="font-heading text-3xl md:text-4xl font-bold">Portões em Alumínio</h3>
+                            <p class="text-slate-300 text-lg leading-relaxed">
+                                Proteja o que é mais importante para você com os portões de alumínio da JCR. Fabricados com materiais de alta qualidade e tecnologia de ponta, oferecem a combinação perfeita de segurança, durabilidade e elegância para sua residência ou empresa.
+                            </p>
+                        </div>
+                        <div class="md:w-1/2 w-full">
+                            <div class="relative rounded-[2rem] overflow-hidden group shadow-2xl">
+                                <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-700 z-10"></div>
+                                <img class="w-full h-[350px] object-cover group-hover:scale-105 transition-transform duration-700" src="img/fotoPortao.jpg" alt="Portões em Alumínio">
+                            </div>
+                        </div>
                     </div>
 
-                    <div class=" w-full text-emerald-50 flex items-center">
-                        <div class='flex justify-center w-full'>
-                            <img class='w-full rounded-md' src="img/fotoPortao.jpg" alt="JCR logo">
+                    <!-- Móveis -->
+                    <div class="flex flex-col-reverse md:flex-row items-center gap-12 reveal-right">
+                        <div class="md:w-1/2 w-full">
+                            <div class="relative rounded-[2rem] overflow-hidden group shadow-2xl">
+                                <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-700 z-10"></div>
+                                <img class="w-full h-[350px] object-cover group-hover:scale-105 transition-transform duration-700" src="img/movelplanejado.png" alt="Móveis Planejados">
+                            </div>
+                        </div>
+                        <div class="md:w-1/2 space-y-6">
+                            <div class="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-emerald-500/10 text-emerald-400 mb-2 border border-emerald-500/20">
+                                <i class="bi bi-house-gear text-2xl"></i>
+                            </div>
+                            <h3 class="font-heading text-3xl md:text-4xl font-bold">Móveis Planejados</h3>
+                            <p class="text-slate-300 text-lg leading-relaxed">
+                                Crie espaços funcionais, personalizados e esteticamente impecáveis com móveis planejados em alumínio. Ideais para cozinhas, banheiros e áreas externas, sendo altamente resistentes à umidade e fáceis de limpar.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Vidros -->
+                    <div class="flex flex-col md:flex-row items-center gap-12 reveal-left">
+                        <div class="md:w-1/2 space-y-6">
+                            <div class="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-emerald-500/10 text-emerald-400 mb-2 border border-emerald-500/20">
+                                <i class="bi bi-droplet-half text-2xl"></i>
+                            </div>
+                            <h3 class="font-heading text-3xl md:text-4xl font-bold">Vidros Temperados, Espelhos & Box</h3>
+                            <p class="text-slate-300 text-lg leading-relaxed">
+                                Soluções completas em vidros temperados sob medida e box para banheiros. Transformamos seus ambientes adicionando amplitude, luminosidade e elegância, sempre garantindo a máxima segurança para sua família.
+                            </p>
+                        </div>
+                        <div class="md:w-1/2 w-full">
+                            <div class="relative rounded-[2rem] overflow-hidden group shadow-2xl">
+                                <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-700 z-10"></div>
+                                <img class="w-full h-[350px] object-cover group-hover:scale-105 transition-transform duration-700" src="img/espelho.jpg" alt="Vidros e Espelhos">
+                            </div>
                         </div>
                     </div>
                 </div>
-
-            </section>
-            <!-- seção de portoes -->
-            <hr class='text-green-50 w-60 text-center' />
-
-
-            <section class="h-auto md:h-screen w-full lg:w-3/4  text-emerald-50 flex flex-col items-center" id='moveis'>
-
-
-                <div class='flex flex-col-reverse md:flex-row m-3 gap-2'>
-                    <div class='flex justify-center w-auto md:w-full '>
-
-
-                        <img class='transition-opacity w-full rounded-md' src="img/movelplanejado.png"
-                            alt="movel planejado">
-                    </div>
-                    <div class='flex flex-col justify-center w-full md:m-3'>
-                        <h1 class='text-center text-xl pb-5 font-bold'>Móveis Planejados</h1>
-                        <p class=' text-justify text-base md:text-1xl'>Crie espaços funcionais, personalizados e
-                            esteticamente impecáveis com os móveis planejados em alumínio da JCR Esquadrias.
-                            Fabricados com materiais de alta qualidade e tecnologia de ponta, nossos móveis oferecem
-                            a combinação perfeita de praticidade, durabilidade e beleza para sua casa ou escritório.
-                        </p>
-                    </div>
+                
+                <div class="mt-24 text-center reveal">
+                    <a href="galeria.html" class="inline-flex items-center gap-3 text-emerald-400 hover:text-emerald-300 font-medium text-xl group transition-colors glass-card px-8 py-4 rounded-full">
+                        Visualizar nosso portfólio completo
+                        <i class="bi bi-arrow-right group-hover:translate-x-2 transition-transform"></i>
+                    </a>
                 </div>
+            </div>
+        </section>
 
-            </section>
-
-            <hr class='text-green-50 w-60' />
-            <section class="h-auto md:h-screen w-full lg:w-3/4  text-emerald-50 flex flex-col items-center" id='vidros'>
-
-                <div class='flex flex-col md:flex-row m-3 gap-2'>
-                    <div class='flex flex-col justify-center w-full text-emerald-50 md:m-3'>
-                        <h1 class='pb-5 text-xl text-center md:text-2xl font-bold'>Vidros temperados, Espelhos e Box
-                        </h1>
-                        <p class='text-justify text-base md:text-1xl'>A JCR Esquadrias oferece soluções completas em
-                            vidros temperados sob medida e box para banheiros, transformando seus ambientes com beleza,
-                            funcionalidade e segurança.</p>
-                    </div>
-                    <div class='flex justify-center w-auto md:w-full'>
-                        <img class='transition-opacity w-full rounded-md' src="img/espelho.jpg" alt="espelho">
-                    </div>
-                </div>
-
-            </section>
-        </div>
         <!-- Contato -->
-        <section
-            class="h-screen bg-neutral-900  text-emerald-50 flex flex-col items-center justify-center w-full gap-20"
-            id='contact'>
-
-            <h1 class="text-green-50 text-6xl mt-7">Contato</h1>
-            <div class='flex flex-col md:flex-row w-full md:w-3/4 gap-6'>
-                <div class='flex justify-center  md:w-1/2 w-full '>
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3639.373513754313!2d-46.80674109999999!3d-24.193694699999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94d1d5426cc8347d%3A0xd989fb76b680ea44!2sR.%20Peru%C3%ADbe%2C%20312%20-%20Praia%20dos%20Sonhos%2C%20Itanha%C3%A9m%20-%20SP%2C%2011740-000!5e0!3m2!1spt-BR!2sbr!4v1719689474479!5m2!1spt-BR!2sbr"
-                        class='w-full  h-full m-3'></iframe>
+        <section id="contact" class="py-24 px-6 relative">
+            <div class="max-w-6xl mx-auto reveal">
+                <div class="text-center mb-16">
+                    <h2 class="font-heading text-4xl md:text-5xl font-bold text-slate-50 mb-4">Fale <span class="text-emerald-400">Conosco</span></h2>
+                    <div class="w-20 h-1 bg-emerald-500 rounded-full mx-auto mb-6"></div>
+                    <p class="text-slate-400 max-w-2xl mx-auto text-lg">Solicite um orçamento sem compromisso e tire seu projeto do papel hoje mesmo.</p>
                 </div>
-                <div class='flex justify-center md:w-1/2 w-full gap-5 mt-5'>
-                    <div class='flex justify-center'>
-                        <a rel="stylesheet"
-                            href="https://wa.me/5513997483229?text=Olá,%20gostaria%20de%20fazer%20um%20orçamento!"
-                            target='_blanck' class='flex justify-center items-center w-full gap-2'>
-                            <i class="bi bi-whatsapp"></i>
-                            <p>13 99748-3229</p>
-                        </a>
+
+                <div class="glass-card rounded-[2rem] overflow-hidden flex flex-col lg:flex-row border border-white/10 shadow-2xl">
+                    <!-- Mapa -->
+                    <div class="lg:w-1/2 h-[400px] lg:h-auto w-full relative">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3639.373513754313!2d-46.80674109999999!3d-24.193694699999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94d1d5426cc8347d%3A0xd989fb76b680ea44!2sR.%20Peru%C3%ADbe%2C%20312%20-%20Praia%20dos%20Sonhos%2C%20Itanha%C3%A9m%20-%20SP%2C%2011740-000!5e0!3m2!1spt-BR!2sbr!4v1719689474479!5m2!1spt-BR!2sbr"
+                            class="absolute inset-0 w-full h-full border-0 grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-700" 
+                            allowfullscreen="" loading="lazy"></iframe>
                     </div>
-                    <div class='flex justify-center'>
-                        <a href="tel:1333288584" class='flex justify-center items-center w-full gap-2'>
-                            <i class="bi bi-telephone-fill"></i>
-                            <p>13 3328-8584</p>
+                    
+                    <!-- Info Contato -->
+                    <div class="lg:w-1/2 p-8 md:p-12 flex flex-col justify-center space-y-6 bg-[#0d0d0d]">
+                        
+                        <a href="https://wa.me/5513997483229?text=Olá,%20gostaria%20de%20fazer%20um%20orçamento!" target="_blank" 
+                           class="flex items-center gap-6 p-5 rounded-2xl glass hover:bg-emerald-600/10 hover:border-emerald-500/30 transition-all group">
+                            <div class="w-14 h-14 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-400 group-hover:scale-110 transition-transform group-hover:bg-emerald-500 group-hover:text-white shadow-[0_0_15px_rgba(16,185,129,0.2)]">
+                                <i class="bi bi-whatsapp text-2xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-slate-400 mb-1">Inicie uma conversa via WhatsApp</p>
+                                <p class="text-2xl font-bold font-heading text-slate-200 group-hover:text-emerald-400 transition-colors">13 99748-3229</p>
+                            </div>
                         </a>
+                        
+                        <a href="tel:1333288584" 
+                           class="flex items-center gap-6 p-5 rounded-2xl glass hover:bg-emerald-600/10 hover:border-emerald-500/30 transition-all group">
+                            <div class="w-14 h-14 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-400 group-hover:scale-110 transition-transform group-hover:bg-emerald-500 group-hover:text-white shadow-[0_0_15px_rgba(16,185,129,0.2)]">
+                                <i class="bi bi-telephone text-2xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-slate-400 mb-1">Ligue para nossa loja</p>
+                                <p class="text-2xl font-bold font-heading text-slate-200 group-hover:text-emerald-400 transition-colors">13 3328-8584</p>
+                            </div>
+                        </a>
+
+                        <div class="flex items-center gap-6 p-5 rounded-2xl glass border border-white/5">
+                            <div class="w-14 h-14 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-400">
+                                <i class="bi bi-geo-alt text-2xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-slate-400 mb-1">Venha nos visitar</p>
+                                <p class="text-base font-medium text-slate-200">R. Peruíbe, 312 - Praia dos Sonhos<br/>Itanhaém - SP, 11740-000</p>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
-
         </section>
 
     </main>
-    <footer class="text-green-50 text-center bg-neutral-900 hover:text-red-200"><a href="https://rafaeldev.com/">&copy;Rafael Mattos</a></footer>
-    <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-</body>
+    
+    <footer class="border-t border-white/10 pt-12 pb-8 mt-10 bg-[#080808]">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-slate-500">
+            <div class="flex items-center gap-3">
+                <img class="w-10 opacity-70" src="img/logo.png" alt="JCR">
+                <p>&copy; 2024 JCR Esquadrias. Todos os direitos reservados.</p>
+            </div>
+            <p>Desenvolvido por <a href="https://rafaeldev.com/" target="_blank" class="text-emerald-500 hover:text-emerald-400 transition-colors font-medium">Rafael Mattos</a></p>
+        </div>
+    </footer>
 
+    <script src="script.js"></script>
+</body>
 </html>
